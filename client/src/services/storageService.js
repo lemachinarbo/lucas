@@ -29,18 +29,16 @@ export const handleLocalStorage = (app, action, key, value = null) => {
 export const loadLocalStorageEntries = async (app) => {
   const storedData = getStoredData();
 
-  app.logMessage(storedData);
-
   if (!Array.isArray(storedData) || storedData.length === 0) {
     app.messageLog = "No transcription data found.";
     return;
   }
 
   const sortedData = sortEntriesByDate(storedData);
-  app.logMessage(sortedData);
   const groupedByDate = groupEntriesByDate(sortedData);
-  app.logMessage(groupedByDate);
-  app.historyLog = await formatGroupedEntries(groupedByDate);
+  const formattedEntries = formatGroupedEntries(groupedByDate);
+
+  app.historyLog = formattedEntries;
 };
 
 export const getStoredData = () => {

@@ -1,7 +1,7 @@
 import { sortEntriesByDate } from "./storageService.js";
 
 export const formatGroupedEntries = async (groupedEntries) => {
-  const template = await loadTemplate("./templates/group-entry.html");
+  const template = await loadTemplate("/templates/group-entry.html");
 
   const formattedSections = await Promise.all(
     Object.entries(groupedEntries).map(async ([date, entries]) => {
@@ -19,14 +19,25 @@ export const formatGroupedEntries = async (groupedEntries) => {
   return formattedSections.join("");
 };
 
+const templateCache = {};
+
 const loadTemplate = async (path) => {
-  const res = await fetch(path);
-  return res.text();
+  if (templateCache[path]) {
+    return templateCache[path];
+  }
+
+  const fetchPromise = fetch(path).then((res) => res.text());
+  templateCache[path] = fetchPromise; // Store the promise to avoid duplicate fetches
+
+  const text = await fetchPromise;
+  templateCache[path] = text; // Replace with resolved text
+
+  return text;
 };
 
 const formatEntry = async (entry) => {
-  let template = await loadTemplate("./templates/log-entry.html");
-  const emotionTemplate = await loadTemplate("./templates/emotion.html");
+  let template = await loadTemplate("/templates/log-entry.html");
+  const emotionTemplate = await loadTemplate("/templates/emotion.html");
 
   const time = new Date(entry.date).toLocaleTimeString([], {
     hour: "2-digit",
