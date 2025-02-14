@@ -1,0 +1,8 @@
+.node-gyp
+node_modules.nvm/
+.nvm/
+.env
+/.old
+node_modules/
+.vscode/
+venv/

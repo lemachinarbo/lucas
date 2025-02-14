@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas</title>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body x-data="app">
+    <h1>Lucas</h1>
+
+    <button @click="hello()">Hello?</button>
+
+    <button
+      @click="startStopRecording()"
+      :class="{ 'recording': isRecording }"
+      x-text="isRecording ? 'Stop Recording' : 'Start Recording'"
+    ></button>
+
+    <button @click="analyzeRandomText()">How you doin'?</button>
+    <button @click="loadLocalStorageEntries()">Load History</button>
+    <hr />
+    <h2>Output:</h2>
+    <code x-html="messageLog"></code>
+    <hr />
+    <h2>Log:</h2>
+    <div x-html="historyLog"></div>
+    <hr />
+    <h2>Settings</h2>
+    <form @submit.prevent="saveSettings">
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>API settings</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Open AI key</td>
+            <td><input type="text" x-model="openAIKey" /></td>
+          </tr>
+          <tr>
+            <td>Hugging Face key</td>
+            <td><input type="text" x-model="huggingFaceKey" /></td>
+          </tr>
+          <tr>
+            <td><strong>Lucas</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Lucas prompt</td>
+            <td>
+              <textarea x-model="userPrompt" cols="60" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button @click="restorePrompt()">Restore Default</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Debug mode</td>
+            <td><input type="checkbox" x-model="debug" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button type="submit">Save Settings</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
