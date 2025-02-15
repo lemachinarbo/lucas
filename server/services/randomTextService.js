@@ -11,7 +11,8 @@ const __dirname = path.dirname(__filename);
  */
 export async function getRandomText() {
   try {
-    const filePath = path.resolve(__dirname, "/tmp/text.json");
+    const filePath = path.join(__dirname, "../../tmp", "text.json");
+
     const fileContent = await fs.readFile(filePath, "utf-8");
     const data = JSON.parse(fileContent);
 

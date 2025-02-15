@@ -32,7 +32,7 @@ const loadTemplate = async (path) => {
   const text = await fetchPromise;
   templateCache[path] = text; // Replace with resolved text
 
-  return text;
+  return text;                                                                                      
 };
 
 const formatEntry = async (entry) => {
