@@ -1,0 +1,272 @@
+[
+  {
+    "emotion": "admiration",
+    "name": "Anumodana",
+    "description": "A deep appreciation for the goodness and virtue in others.",
+    "topic": "Rejoicing in Merit",
+    "redirection": [
+      "Celebrate the achievements and virtues of others.",
+      "Cultivate humility and gratitude by recognizing shared goodness."
+    ]
+  },
+  {
+    "emotion": "amusement",
+    "name": "Pamojja",
+    "description": "A light-hearted joy arising from ease and humor.",
+    "topic": "Mindful Joy",
+    "redirection": [
+      "Enjoy the present moment with awareness.",
+      "Use humor to foster connection and relieve stress."
+    ]
+  },
+  {
+    "emotion": "anger",
+    "name": "Dosa",
+    "description": "Aversion and hostility that create suffering.",
+    "topic": "Compassion",
+    "redirection": [
+      "Practice loving-kindness (Metta) to transform anger.",
+      "Reflect on impermanence to let go of resentment."
+    ]
+  },
+  {
+    "emotion": "annoyance",
+    "name": "Uddhacca",
+    "description": "Restlessness and irritation clouding the mind.",
+    "topic": "Patience",
+    "redirection": [
+      "Take deep breaths and observe emotions without reacting.",
+      "Cultivate equanimity by recognizing the transient nature of frustration."
+    ]
+  },
+  {
+    "emotion": "approval",
+    "name": "Mudita",
+    "description": "Sympathetic joy for the success and happiness of others.",
+    "topic": "Compassion",
+    "redirection": [
+      "Rejoice in the happiness of others without comparison.",
+      "Encourage goodwill and avoid envy."
+    ]
+  },
+  {
+    "emotion": "caring",
+    "name": "Metta",
+    "description": "Unconditional loving-kindness towards all beings.",
+    "topic": "Compassion",
+    "redirection": [
+      "Extend kindness without expecting anything in return.",
+      "Recognize the shared humanity in all beings."
+    ]
+  },
+  {
+    "emotion": "confusion",
+    "name": "Moha",
+    "description": "Delusion and misunderstanding clouding perception.",
+    "topic": "Wisdom",
+    "redirection": [
+      "Seek knowledge and clarity through mindful observation.",
+      "Question assumptions and cultivate discernment."
+    ]
+  },
+  {
+    "emotion": "curiosity",
+    "name": "Vīmaṁsā",
+    "description": "A desire to investigate and understand deeply.",
+    "topic": "Wisdom",
+    "redirection": [
+      "Engage in critical thinking and self-inquiry.",
+      "Explore teachings with an open but discerning mind."
+    ]
+  },
+  {
+    "emotion": "desire",
+    "name": "Tanha",
+    "description": "Craving that leads to attachment and suffering.",
+    "topic": "Non-Attachment",
+    "redirection": [
+      "Recognize the impermanence of desires.",
+      "Cultivate contentment with what is."
+    ]
+  },
+  {
+    "emotion": "disappointment",
+    "name": "Vipallasa",
+    "description": "Misperception leading to unmet expectations.",
+    "topic": "Acceptance",
+    "redirection": [
+      "Adjust expectations and embrace uncertainty.",
+      "See setbacks as opportunities for growth."
+    ]
+  },
+  {
+    "emotion": "disapproval",
+    "name": "Dosa",
+    "description": "Aversion arising from judgment and dissatisfaction.",
+    "topic": "Equanimity",
+    "redirection": [
+      "Accept differences without hostility.",
+      "Cultivate understanding instead of judgment."
+    ]
+  },
+  {
+    "emotion": "disgust",
+    "name": "Patigha",
+    "description": "Strong aversion towards something perceived as unpleasant.",
+    "topic": "Mindfulness",
+    "redirection": [
+      "Observe disgust with non-attachment.",
+      "Cultivate acceptance of life's imperfection."
+    ]
+  },
+  {
+    "emotion": "embarrassment",
+    "name": "Hiri",
+    "description": "A sense of shame that arises from self-awareness.",
+    "topic": "Humility",
+    "redirection": [
+      "Use embarrassment as a tool for growth.",
+      "Practice self-compassion and move forward."
+    ]
+  },
+  {
+    "emotion": "excitement",
+    "name": "Pamojja",
+    "description": "Eager anticipation and positive energy.",
+    "topic": "Mindful Enthusiasm",
+    "redirection": [
+      "Channel excitement into meaningful action.",
+      "Balance enthusiasm with steadiness."
+    ]
+  },
+  {
+    "emotion": "fear",
+    "name": "Bhayā",
+    "description": "Anxiety arising from uncertainty and perceived threats.",
+    "topic": "Courage",
+    "redirection": [
+      "Acknowledge fear without letting it control you.",
+      "Cultivate inner peace through mindfulness."
+    ]
+  },
+  {
+    "emotion": "gratitude",
+    "name": "Kataññu",
+    "description": "A deep appreciation for life's blessings.",
+    "topic": "Gratitude",
+    "redirection": [
+      "Express thanks for both joys and challenges.",
+      "Recognize interdependence and shared kindness."
+    ]
+  },
+  {
+    "emotion": "grief",
+    "name": "Soka",
+    "description": "Sorrow arising from loss and attachment.",
+    "topic": "Impermanence",
+    "redirection": [
+      "Accept change as part of life.",
+      "Find meaning in the impermanent nature of existence."
+    ]
+  },
+
+  "joy": {
+    "name": "Pīti",
+    "description": "A deep sense of happiness and enthusiasm in spiritual practice.",
+    "topic": "Joy in Practice",
+    "redirection": [
+      "Cultivate joy through gratitude and appreciation.",
+      "Recognize the impermanence of all experiences, including happiness."
+    ]
+  },
+  "love": {
+    "name": "Mettā",
+    "description": "Unconditional loving-kindness towards all beings.",
+    "topic": "Loving-Kindness",
+    "redirection": [
+      "Practice loving-kindness meditation.",
+      "Extend kindness beyond personal attachments."
+    ]
+  },
+  "nervousness": {
+    "name": "Uddhacca",
+    "description": "Restlessness and agitation due to uncertainty.",
+    "topic": "Mental Restlessness",
+    "redirection": [
+      "Ground yourself through mindfulness and deep breathing.",
+      "Acknowledge uncertainty as a natural part of life."
+    ]
+  },
+  "optimism": {
+    "name": "Saddhā",
+    "description": "Faith and confidence in the path to wisdom and liberation.",
+    "topic": "Faith and Confidence",
+    "redirection": [
+      "Strengthen faith through practice and self-reflection.",
+      "Balance optimism with wisdom and realistic expectations."
+    ]
+  },
+  "pride": {
+    "name": "Māna",
+    "description": "A sense of self-importance that can lead to ego attachment.",
+    "topic": "Ego and Comparison",
+    "redirection": [
+      "Reflect on the interconnectedness of all beings.",
+      "Cultivate humility through service and self-awareness."
+    ]
+  },
+  "realization": {
+    "name": "Ñāṇa",
+    "description": "A moment of deep insight into truth.",
+    "topic": "Wisdom and Insight",
+    "redirection": [
+      "Deepen understanding through meditation and study.",
+      "Recognize that realization is a continuous process."
+    ]
+  },
+  "relief": {
+    "name": "Vimutti",
+    "description": "The experience of liberation from suffering.",
+    "topic": "Freedom from Suffering",
+    "redirection": [
+      "Cultivate detachment from stress and worries.",
+      "Appreciate moments of peace as steps toward deeper liberation."
+    ]
+  },
+  "remorse": {
+    "name": "Kukkucca",
+    "description": "Regret and guilt over past actions.",
+    "topic": "Regret and Letting Go",
+    "redirection": [
+      "Acknowledge mistakes with self-compassion.",
+      "Transform remorse into positive change and ethical living."
+    ]
+  },
+  "sadness": {
+    "name": "Soka",
+    "description": "Grief and sorrow caused by attachment.",
+    "topic": "Impermanence and Grief",
+    "redirection": [
+      "Accept change as a natural process.",
+      "Practice mindfulness to ease emotional suffering."
+    ]
+  },
+  "surprise": {
+    "name": "Vismaya",
+    "description": "A sense of awe and wonder in discovering truth.",
+    "topic": "Curiosity and Discovery",
+    "redirection": [
+      "Embrace learning with an open mind.",
+      "Use surprise as a gateway to deeper understanding."
+    ]
+  },
+  "neutral": {
+    "name": "Upekkhā",
+    "description": "Equanimity and balance in all circumstances.",
+    "topic": "Equanimity",
+    "redirection": [
+      "Maintain inner peace in all situations.",
+      "Recognize the impermanent nature of emotions."
+    ]
+  }
+]
