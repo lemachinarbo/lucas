@@ -55,6 +55,7 @@ async function fetchAnalysisData(app, text) {
     throw new Error(`Emotion API error: ${emotionResponse.statusText}`);
   }
   const emotionResult = await emotionResponse.json();
+  app.logMessage("Emotions Response:", emotionResult);
 
   app.logMessage("Ping: /api/sentiment", true);
   const sentimentResponse = await fetch("/api/sentiment", {
@@ -70,10 +71,29 @@ async function fetchAnalysisData(app, text) {
     throw new Error(`Sentiment API error: ${sentimentResponse.statusText}`);
   }
   const sentimentResult = await sentimentResponse.json();
+  app.logMessage("Sentiment Response:", sentimentResult);
 
-  const formattedEmotions = (emotionResult.emotions?.significantEmotions || [])
+  const significantEmotions = emotionResult.emotions?.significantEmotions;
+
+  const formattedEmotions = (significantEmotions || [])
     .map(({ emotion, score }) => `${emotion} ${score.toFixed(2)}`)
     .join(", ");
+
+  app.logMessage("Ping: /api/insights", true);
+  const insightsResponse = await fetch("/api/insights", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ emotions: significantEmotions }),
+  });
+
+  if (!insightsResponse.ok) {
+    throw new Error(`Insights API error: ${insightsResponse.statusText}`);
+  }
+  const insightsResult = await insightsResponse.json();
+  app.logMessage("Insights Response:", insightsResult);
+  console.log(insightsResult);
 
   const formattedSentiment = `${
     sentimentResult.sentiment?.sentiment
@@ -96,6 +116,7 @@ async function fetchAnalysisData(app, text) {
       transcription: text,
       emotions: formattedEmotions,
       sentiment: formattedSentiment,
+      insights: insightsResult,
       customPrompt,
     }),
   });
@@ -104,10 +125,12 @@ async function fetchAnalysisData(app, text) {
     throw new Error(`Feedback API error: ${feedbackResponse.statusText}`);
   }
   const feedbackResult = await feedbackResponse.json();
+  app.logMessage("Feedback Response:", feedbackResult);
 
   return {
     emotions: emotionResult.emotions?.significantEmotions || [],
     sentiment: sentimentResult.sentiment || {},
+    insights: insightsResult || {},
     feedback: feedbackResult.feedback || "",
   };
 }

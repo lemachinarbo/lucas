@@ -6,6 +6,7 @@ import { classifyEmotions } from "../services/emotionService.js";
 import { getRandomText } from "../services/randomTextService.js";
 import { classifySentiment } from "../services/sentimentService.js";
 import { generateFeedback, fetchPrompt } from "../services/feedbackService.js";
+import { getInsightsForEmotions } from "../services/insightService.js";
 import fastifyMultipart from "@fastify/multipart";
 
 export default async function (fastify) {
@@ -269,12 +270,9 @@ export default async function (fastify) {
 
   fastify.post("/api/feedback", async (request, reply) => {
     try {
-      const { transcription, sentiment, emotions, customPrompt } = request.body;
+      const { transcription, sentiment, emotions, insights, customPrompt } =
+        request.body;
       const huggingFaceKey = request.headers["huggingfacekey"];
-
-      console.log("transcription: ", transcription);
-      console.log("sentiment: ", sentiment);
-      console.log("emotions: ", emotions);
 
       if (!transcription) {
         return reply
@@ -290,6 +288,7 @@ export default async function (fastify) {
         transcription,
         sentiment,
         emotions,
+        insights,
         customPrompt,
         huggingFaceKey
       );
@@ -297,6 +296,56 @@ export default async function (fastify) {
       return reply.status(200).send({ feedback });
     } catch (error) {
       console.error("Error during feedback analysis:", error);
+      return reply.status(500).send({ message: "Internal server error." });
+    }
+  });
+
+  /**
+   * POST /api/insights
+   * -------------------------------
+   * Description:
+   * - Accepts a list of emotions and retrieves relevant insights from insights.json.
+   *
+   * Request:
+   * - Headers: Content-Type: application/json
+   * - Body: { emotions: string[] } - Array of emotion names.
+   *
+   * Response:
+   * - 200: { insights: Object } - Insights related to the requested emotions.
+   * - 400: { message: string } - Invalid or missing input.
+   * - 500: { message: string } - Internal server error.
+   *
+   * Example Request:
+   * {
+   *   "emotions": ["surprise", "joy"]
+   * }
+   *
+   * Example Response:
+   * {
+   *   "insights": {
+   *     "surprise": {
+   *       "topic": "Curiosity and Discovery",
+   *       "redirection": [
+   *         "Embrace learning with an open mind.",
+   *         "Use surprise as a gateway to deeper understanding."
+   *       ]
+   *     }
+   *   }
+   * }
+   */
+  fastify.post("/api/insights", async (request, reply) => {
+    try {
+      const { emotions } = request.body;
+      console.log("Emotions received:", emotions);
+
+      if (!Array.isArray(emotions) || emotions.length === 0) {
+        return reply.status(400).send({ message: "Invalid emotions list." });
+      }
+
+      const insights = await getInsightsForEmotions(emotions);
+      return reply.status(200).send({ insights });
+    } catch (error) {
+      console.error("Error fetching insights:", error.message);
       return reply.status(500).send({ message: "Internal server error." });
     }
   });

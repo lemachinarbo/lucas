@@ -169,104 +169,116 @@
       "Find meaning in the impermanent nature of existence."
     ]
   },
-
-  "joy": {
-    "name": "Pīti",
-    "description": "A deep sense of happiness and enthusiasm in spiritual practice.",
-    "topic": "Joy in Practice",
-    "redirection": [
-      "Cultivate joy through gratitude and appreciation.",
-      "Recognize the impermanence of all experiences, including happiness."
-    ]
-  },
-  "love": {
-    "name": "Mettā",
-    "description": "Unconditional loving-kindness towards all beings.",
-    "topic": "Loving-Kindness",
-    "redirection": [
-      "Practice loving-kindness meditation.",
-      "Extend kindness beyond personal attachments."
-    ]
-  },
-  "nervousness": {
-    "name": "Uddhacca",
-    "description": "Restlessness and agitation due to uncertainty.",
-    "topic": "Mental Restlessness",
-    "redirection": [
-      "Ground yourself through mindfulness and deep breathing.",
-      "Acknowledge uncertainty as a natural part of life."
-    ]
-  },
-  "optimism": {
-    "name": "Saddhā",
-    "description": "Faith and confidence in the path to wisdom and liberation.",
-    "topic": "Faith and Confidence",
-    "redirection": [
-      "Strengthen faith through practice and self-reflection.",
-      "Balance optimism with wisdom and realistic expectations."
-    ]
-  },
-  "pride": {
-    "name": "Māna",
-    "description": "A sense of self-importance that can lead to ego attachment.",
-    "topic": "Ego and Comparison",
-    "redirection": [
-      "Reflect on the interconnectedness of all beings.",
-      "Cultivate humility through service and self-awareness."
-    ]
-  },
-  "realization": {
-    "name": "Ñāṇa",
-    "description": "A moment of deep insight into truth.",
-    "topic": "Wisdom and Insight",
-    "redirection": [
-      "Deepen understanding through meditation and study.",
-      "Recognize that realization is a continuous process."
-    ]
-  },
-  "relief": {
-    "name": "Vimutti",
-    "description": "The experience of liberation from suffering.",
-    "topic": "Freedom from Suffering",
-    "redirection": [
-      "Cultivate detachment from stress and worries.",
-      "Appreciate moments of peace as steps toward deeper liberation."
-    ]
-  },
-  "remorse": {
-    "name": "Kukkucca",
-    "description": "Regret and guilt over past actions.",
-    "topic": "Regret and Letting Go",
-    "redirection": [
-      "Acknowledge mistakes with self-compassion.",
-      "Transform remorse into positive change and ethical living."
-    ]
-  },
-  "sadness": {
-    "name": "Soka",
-    "description": "Grief and sorrow caused by attachment.",
-    "topic": "Impermanence and Grief",
-    "redirection": [
-      "Accept change as a natural process.",
-      "Practice mindfulness to ease emotional suffering."
-    ]
-  },
-  "surprise": {
-    "name": "Vismaya",
-    "description": "A sense of awe and wonder in discovering truth.",
-    "topic": "Curiosity and Discovery",
-    "redirection": [
-      "Embrace learning with an open mind.",
-      "Use surprise as a gateway to deeper understanding."
-    ]
-  },
-  "neutral": {
-    "name": "Upekkhā",
-    "description": "Equanimity and balance in all circumstances.",
-    "topic": "Equanimity",
-    "redirection": [
-      "Maintain inner peace in all situations.",
-      "Recognize the impermanent nature of emotions."
-    ]
-  }
+  [
+    {
+      "emotion": "joy",
+      "name": "Pīti",
+      "description": "A deep sense of happiness and enthusiasm in spiritual practice.",
+      "topic": "Joy in Practice",
+      "redirection": [
+        "Cultivate joy through gratitude and appreciation.",
+        "Recognize the impermanence of all experiences, including happiness."
+      ]
+    },
+    {
+      "emotion": "love",
+      "name": "Mettā",
+      "description": "Unconditional loving-kindness towards all beings.",
+      "topic": "Loving-Kindness",
+      "redirection": [
+        "Practice loving-kindness meditation.",
+        "Extend kindness beyond personal attachments."
+      ]
+    },
+    {
+      "emotion": "nervousness",
+      "name": "Uddhacca",
+      "description": "Restlessness and agitation due to uncertainty.",
+      "topic": "Mental Restlessness",
+      "redirection": [
+        "Ground yourself through mindfulness and deep breathing.",
+        "Acknowledge uncertainty as a natural part of life."
+      ]
+    },
+    {
+      "emotion": "optimism",
+      "name": "Saddhā",
+      "description": "Faith and confidence in the path to wisdom and liberation.",
+      "topic": "Faith and Confidence",
+      "redirection": [
+        "Strengthen faith through practice and self-reflection.",
+        "Balance optimism with wisdom and realistic expectations."
+      ]
+    },
+    {
+      "emotion": "pride",
+      "name": "Māna",
+      "description": "A sense of self-importance that can lead to ego attachment.",
+      "topic": "Ego and Comparison",
+      "redirection": [
+        "Reflect on the interconnectedness of all beings.",
+        "Cultivate humility through service and self-awareness."
+      ]
+    },
+    {
+      "emotion": "realization",
+      "name": "Ñāṇa",
+      "description": "A moment of deep insight into truth.",
+      "topic": "Wisdom and Insight",
+      "redirection": [
+        "Deepen understanding through meditation and study.",
+        "Recognize that realization is a continuous process."
+      ]
+    },
+    {
+      "emotion": "relief",
+      "name": "Vimutti",
+      "description": "The experience of liberation from suffering.",
+      "topic": "Freedom from Suffering",
+      "redirection": [
+        "Cultivate detachment from stress and worries.",
+        "Appreciate moments of peace as steps toward deeper liberation."
+      ]
+    },
+    {
+      "emotion": "remorse",
+      "name": "Kukkucca",
+      "description": "Regret and guilt over past actions.",
+      "topic": "Regret and Letting Go",
+      "redirection": [
+        "Acknowledge mistakes with self-compassion.",
+        "Transform remorse into positive change and ethical living."
+      ]
+    },
+    {
+      "emotion": "sadness",
+      "name": "Soka",
+      "description": "Grief and sorrow caused by attachment.",
+      "topic": "Impermanence and Grief",
+      "redirection": [
+        "Accept change as a natural process.",
+        "Practice mindfulness to ease emotional suffering."
+      ]
+    },
+    {
+      "emotion": "surprise",
+      "name": "Vismaya",
+      "description": "A sense of awe and wonder in discovering truth.",
+      "topic": "Curiosity and Discovery",
+      "redirection": [
+        "Embrace learning with an open mind.",
+        "Use surprise as a gateway to deeper understanding."
+      ]
+    },
+    {
+      "emotion": "neutral",
+      "name": "Upekkhā",
+      "description": "Equanimity and balance in all circumstances.",
+      "topic": "Equanimity",
+      "redirection": [
+        "Maintain inner peace in all situations.",
+        "Recognize the impermanent nature of emotions."
+      ]
+    }
+  ]
 ]
